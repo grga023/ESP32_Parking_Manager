@@ -1,0 +1,36 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Connecting to Wi-Fi....
+Connected to Wi-Fi
+IP Address: 192.168.1.77
+[ 12334][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 13350][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 14366][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 15382][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 16398][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 17414][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 18430][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 19446][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 20462][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 21478][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 22494][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 23501][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 24517][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 25533][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 26549][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 27565][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 28581][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 29597][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 30613][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 31629][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263

@@ -1,0 +1,590 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Connecting to Wi-Fi....
+Connected to Wi-Fi
+IP Address: 192.168.1.77
+[  3745][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  4761][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  5777][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  6793][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  7809][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  8825][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  9841][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 10857][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 11873][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 12889][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 13905][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 14912][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 15928][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 16944][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 17960][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 18976][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 19992][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 21008][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 22024][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 23040][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 24056][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 25072][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+RFID module is not connected.Failed to initialize display
+ESP32 Clock Data:
+==================================
+CPU Frequency: 240 MHz
+APB Frequency: 80000000 Hz
+I2C Bus Frequency: 400000 Hz
+==================================
+Components init Data:
+==================================
+Distance sensor init data: faild to start Starded Starded Starded Starded
+RFID scanner init state:faild to start
+Display init state: faild to start
+==================================
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 500
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}
+[HTTP] POST request sent, response code: 400
+{"error":"Invalid data"}

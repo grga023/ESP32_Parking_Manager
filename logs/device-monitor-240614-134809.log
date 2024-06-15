@@ -1,0 +1,59 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Connecting to Wi-Fi....
+Connected to Wi-Fi
+IP Address: 192.168.1.77
+[  3742][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  4758][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  5774][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  6790][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  7806][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  8822][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[  9838][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 10854][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 11870][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 12886][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 13902][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 14909][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 15925][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 16941][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 17957][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 18973][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 19989][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 21005][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 22021][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 23037][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 24053][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+[ 25069][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+RFID module is not connected.
+Failed to initialize display
+ESP32 Clock Data:
+==================================
+CPU Frequency: 240 MHz
+APB Frequency: 80000000 Hz
+I2C Bus Frequency: 400000 Hz
+==================================
+
+Components init Data:
+==================================
+Distance sensor init data: faild to start Starded Starded Starded Starded
+RFID scanner init state:faild to start
+Display init state: faild to start
+==================================
+
+false false false false 
+false false false false 
+false false false false 
+false false false false 
+false false false false 
