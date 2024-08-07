@@ -51,31 +51,33 @@ void setup() {
   setupRFID();
   setupDisplay();
 
-  Serial.println("ESP32 Clock Data:");
-  Serial.println("==================================");
-  Serial.printf("CPU Frequency: %u MHz\n", getCpuFrequencyMhz());
-  Serial.printf("APB Frequency: %u Hz\n", getApbFrequency());
-  Serial.printf("I2C Bus Frequency: %u Hz\n", I2C_SPEED);
-  Serial.println("==================================");
-  
-  Serial.println();
-  
-  Serial.println("Components init Data:");
-  Serial.println("==================================");
-  Serial.println("Distance sensor init data:");
-  Serial.println("[1]: " + componentInit.distance[0] ? "Starded" : "Faild to start");
-  Serial.println("[2]: " + componentInit.distance[1] ? "Starded" : "Faild to start");
-  Serial.println("[3]: " + componentInit.distance[2] ? "Starded" : "Faild to start");
-  Serial.println("[4]: " + componentInit.distance[3] ? "Starded" : "Faild to start");
-  Serial.println("[5]: " + componentInit.distance[4] ? "Starded" : "Faild to start");
-  Serial.println("==================================");
-  Serial.print("RFID scanner init state:");
-  Serial.println(componentInit.rfid ? " Starded" : " Faild to start");
-  Serial.println("==================================");
-  Serial.print("Display init state: ");
-  Serial.println(componentInit.display ? " Starded" : " Faild to start");
-  Serial.println("==================================");
-  Serial.println();
+  #ifdef DEBUG
+    Serial.println("ESP32 Clock Data:");
+    Serial.println("==================================");
+    Serial.printf("CPU Frequency: %u MHz\n", getCpuFrequencyMhz());
+    Serial.printf("APB Frequency: %u Hz\n", getApbFrequency());
+    Serial.printf("I2C Bus Frequency: %u Hz\n", I2C_SPEED);
+    Serial.println("==================================");
+    
+    Serial.println();
+    
+    Serial.println("Components init Data:");
+    Serial.println("==================================");
+    Serial.println("Distance sensor init data:");
+    Serial.println("[1]: " + componentInit.distance[0] ? "Starded" : "Faild to start");
+    Serial.println("[2]: " + componentInit.distance[1] ? "Starded" : "Faild to start");
+    Serial.println("[3]: " + componentInit.distance[2] ? "Starded" : "Faild to start");
+    Serial.println("[4]: " + componentInit.distance[3] ? "Starded" : "Faild to start");
+    Serial.println("[5]: " + componentInit.distance[4] ? "Starded" : "Faild to start");
+    Serial.println("==================================");
+    Serial.print("RFID scanner init state:");
+    Serial.println(componentInit.rfid ? " Starded" : " Faild to start");
+    Serial.println("==================================");
+    Serial.print("Display init state: ");
+    Serial.println(componentInit.display ? " Starded" : " Faild to start");
+    Serial.println("==================================");
+    Serial.println();
+  #endif 
 
   if(componentInit.rfid)
     xTaskCreate(Task_RFIDScanner, "RFIDScanner", 4096, NULL, 1, &xTaskScanRFID);

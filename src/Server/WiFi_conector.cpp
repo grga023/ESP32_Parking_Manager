@@ -4,10 +4,8 @@
 
 void WIFIsetup()
 {
-  WiFi.begin(WIFI_SSID, WIFI_PASWORD);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println(WiFi.localIP());
+    WiFi.begin(WIFI_SSID, WIFI_PASWORD);
+    while (WiFi.status() != WL_CONNECTED) {
+      delay(500);
+    }
 }

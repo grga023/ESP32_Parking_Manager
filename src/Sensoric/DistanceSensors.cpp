@@ -3,8 +3,6 @@
 #include "DistanceSensor.h"
 #include "Servo_main.h"
 
-// #define DEBUG
-
 Adafruit_VL6180X vl1 = Adafruit_VL6180X();
 Adafruit_VL6180X vl2 = Adafruit_VL6180X();
 Adafruit_VL6180X vl3 = Adafruit_VL6180X();
@@ -73,22 +71,28 @@ void Task_ExitRamp(void* param)
 
 void VL_Setup()
 { 
-  if(!Wire.begin())
-  {    
-    for(int i = 0; i < 5; i++){
-        componentInit.distance[i] = {false};
+    if(!Wire.begin())
+    {    
+        for(int i = 0; i < 5; i++){
+            componentInit.distance[i] = {false};
+        }
+        return;
     }
-    return;
-  }
-  Wire.setClock(I2C_SPEED);
+    Wire.setClock(I2C_SPEED);
   
-  pinMode(SHDN_VL1, OUTPUT);
-  pinMode(SHDN_VL2, OUTPUT);
-  pinMode(SHDN_VL3, OUTPUT);
-  pinMode(SHDN_VL4, OUTPUT);
-  pinMode(SHDN_VL5, OUTPUT);
+    pinMode(SHDN_VL1, OUTPUT);
+    pinMode(SHDN_VL2, OUTPUT);
+    pinMode(SHDN_VL3, OUTPUT);
+    pinMode(SHDN_VL4, OUTPUT);
+    pinMode(SHDN_VL5, OUTPUT);
 
-  setupAddress();
+    digitalWrite(SHDN_VL1, LOW);
+    digitalWrite(SHDN_VL2, LOW);
+    digitalWrite(SHDN_VL3, LOW);
+    digitalWrite(SHDN_VL4, LOW);
+    digitalWrite(SHDN_VL5, LOW);
+
+    setupAddress();
 }
 
 void setupAddress()
@@ -113,9 +117,9 @@ void setupAddress()
         }
         delay(10);
     }
-  #ifdef DEBUG
-  check();
-  #endif
+    #ifdef DEBUG
+    check();
+    #endif
 }
 
 #ifdef DEBUG
