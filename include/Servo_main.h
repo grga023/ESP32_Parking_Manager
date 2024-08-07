@@ -1,6 +1,7 @@
 #pragma once
 
-void moveServo(int degrees, int pin);
-extern void ExitRamp();
-extern void EnterRamp();
+void ExitRamp();
+void EnterRamp();
+extern void task_entry(void* param);
+extern void task_exit(void* param);
 extern void setupServo();

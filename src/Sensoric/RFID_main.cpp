@@ -5,10 +5,12 @@
 #include "Display_main.h"
 #include "Servo_main.h"
 #include "Proximity_main.h"
+#include "WebServer.h"
 
 Adafruit_PN532 scanner(SDA_PIN, SCL_PIN);
 
 extern int empty;
+extern int lastState;
 extern persons ljudi;
 extern components componentInit;
 extern TaskHandle_t xTaskDisplayState;
@@ -18,7 +20,6 @@ void setupRFID()
   scanner.begin();
   uint32_t versiondata = scanner.getFirmwareVersion();
   if (!versiondata) {
-    Serial.println("RFID module is not connected.");
     componentInit.rfid = false;
     return;
   }
@@ -34,25 +35,23 @@ void Task_RFIDScanner(void* param)
 
   while(1)
   {
-    if(!empty){
+    if(empty){
       scanner.wakeup();
       scanned = scanner.readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength, 200);
       if(scanned)
       {
+        #ifdef DEBUG
+          Serial.printf("Scanned ");
+          for (int i = 0; i<uidLength; i++){
+            Serial.printf("0x%X ",uid[i]);
+          }
+          Serial.printf("\n");
+        #endif
         (void)checkID(uid, ljudi);
+        scanned = 0;
       }
     }
     vTaskDelay(pdMS_TO_TICKS(200));
-  }
-}
-
-void openRamp()
-{
-  if (triggerDistance()){
-    ExitRamp();
-  }
-  else{
-    //do nothing
   }
 }
 
@@ -73,8 +72,10 @@ person checkID(uint8_t* uid, person* ljudi)
         displayContent();
         vTaskDelay(pdMS_TO_TICKS(2000));
         WriteOnDisplay(3, 5, 20, ljudi[i].name.c_str(), true);
+        addLogEntry(ljudi[i].name.c_str());
         displayContent();
         EnterRamp();
+        lastState = 255;
         vTaskResume(xTaskDisplayState);
         return ljudi[i];
       }
@@ -86,47 +87,3 @@ person checkID(uint8_t* uid, person* ljudi)
   vTaskResume(xTaskDisplayState);
   return EmptyPerson;
 }
-
-// void scanRFID(int empty, person* ljudi )
-// {
-//   uint8_t uid[] = { 0, 0, 0, 0, 0, 0, 0 }; 
-//   uint8_t scanned;
-//   uint8_t uidLength;
-//   std::string emptySlots = "";
-//   person Person;
-
-//   if (empty != 0)
-//   {
-//     WriteOnDisplay(2, 5, 0, "FREE SPOTS", true);
-//     emptySlots = std::to_string(empty);
-//     WriteOnDisplay(4, 25, 25, emptySlots, false);
-//     WriteOnDisplay(4, 48, 25, "/4", false);
-//     displayContent();
-//     scanner.wakeup();
-//     scanned = scanner.readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength, 200);
-//     if (scanned) 
-//     {
-//       Person = checkID(uid, ljudi);
-//       if (Person.name != "")
-//       {
-//         WriteOnDisplay(3, 0, 0, "HELLO!", true);
-//         displayContent();
-//         vTaskDelay(pdMS_TO_TICKS(2000));
-//         WriteOnDisplay(3, 5, 20, Person.name.c_str(), true);
-//         displayContent();
-//         EnterRamp();
-//       }
-//       else
-//       {
-//         WriteOnDisplay(3, 0, 0, "ACCESS DENIED", true);
-//         displayContent();
-//         vTaskDelay(pdMS_TO_TICKS(2000));
-//       }
-//     }
-//   }
-//   else
-//   {
-//     WriteOnDisplay(3, 0, 0, "PARKING FULL", true);
-//     displayContent();
-//   }
-// }

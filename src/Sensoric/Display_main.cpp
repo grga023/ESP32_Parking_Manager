@@ -8,11 +8,11 @@
 Adafruit_SH1107 display = Adafruit_SH1107(64, 128, &Wire);
 extern int empty;
 extern components componentInit;
+int lastState;
 
 void setupDisplay()
 {
   if (!display.begin(0x3C, true)) {
-    Serial.println("Failed to initialize display");
     componentInit.display = false;
     return;
   }
@@ -50,7 +50,7 @@ void displayContent()
 void Task_DisplayState(void* param)
 {
   std::string emptySlots = "";
-  int lastState = 0;
+  lastState = 0;
   while (1)
   {
     switch (empty)

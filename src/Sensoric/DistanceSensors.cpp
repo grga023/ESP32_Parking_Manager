@@ -3,17 +3,22 @@
 #include "DistanceSensor.h"
 #include "Servo_main.h"
 
+// #define DEBUG
+
 Adafruit_VL6180X vl1 = Adafruit_VL6180X();
 Adafruit_VL6180X vl2 = Adafruit_VL6180X();
 Adafruit_VL6180X vl3 = Adafruit_VL6180X();
 Adafruit_VL6180X vl4 = Adafruit_VL6180X();
 Adafruit_VL6180X vl5 = Adafruit_VL6180X();
 
-uint8_t SHDN[5]         = {SHDN_VL1, SHDN_VL2, SHDN_VL3, SHDN_VL4, SHDN_VL5};
-uint8_t VL_Address[5]   = {VL1_ADDRESS, VL2_ADDRESS, VL3_ADDRESS, VL4_ADDRESS, VL5_ADDRESS};
-Adafruit_VL6180X *sensors[5] = {&vl1, &vl2, &vl3, &vl4, &vl5};
+extern TaskHandle_t xexit;
+
+uint8_t SHDN[5]                 = {SHDN_VL1, SHDN_VL2, SHDN_VL3, SHDN_VL4, SHDN_VL5};
+uint8_t VL_Address[5]           = {VL1_ADDRESS, VL2_ADDRESS, VL3_ADDRESS, VL4_ADDRESS, VL5_ADDRESS};
+Adafruit_VL6180X *sensors[5]    = {&vl1, &vl2, &vl3, &vl4, &vl5};
 extern bool EParkingSlots[4];
 extern components componentInit;
+extern int empty;
 
 void Task_ParkingSlotCheck(void* param)
 {
@@ -27,8 +32,19 @@ void Task_ParkingSlotCheck(void* param)
         {
             if(sensors[i]->readRange() < TRIGGER_DISTANCE)
             {
-                EParkingSlots[i] = true;
-            }else EParkingSlots[i] = false;
+                if(EParkingSlots[i] != true)
+                {
+                    empty--;
+                    EParkingSlots[i] = true;
+                }
+            }else
+            {
+                if(EParkingSlots[i] != false)
+                {
+                    EParkingSlots[i] = false;
+                    empty++;
+                }
+            } 
         }
         #ifdef DEBUG
         time2 = millis() - time;
@@ -42,14 +58,17 @@ void Task_ParkingSlotCheck(void* param)
 
 void Task_ExitRamp(void* param)
 {
+    uint8_t distance;
     while(1)
     {
-        if(sensors[4]->readRange() < TRIGGER_DISTANCE)
-            ExitRamp();
-
+        distance = sensors[4]->readRange();
+        if(distance < TRIGGER_DISTANCE && distance != 0)
+        {
+            vTaskResume(xexit);
+            Serial.println(distance);
+        }
         vTaskDelay(pdMS_TO_TICKS(200));
     }
-
 }
 
 void VL_Setup()
@@ -81,7 +100,7 @@ void setupAddress()
 
         if (!sensors[i]->begin()) {
             #ifdef DEBUG
-            Serial.printf("Failed to boot %d. VL6180X", i+1);
+            Serial.printf("Failed to boot %d. VL6180X\n", i+1);
             #endif
             componentInit.distance[i] = false;
         }

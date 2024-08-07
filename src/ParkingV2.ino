@@ -13,6 +13,7 @@
 #include "WiFi.h"
 #include "DataSender.h"
 #include "WebServer.h"
+#include "CPU_monitoring.h"
 
 TaskHandle_t xTaskScanRFID;
 TaskHandle_t xTaskDisplayState;
@@ -26,25 +27,8 @@ int empty = 4;
 int sum[4] = {0}; 
 bool EParkingSlots[4] = {0};
 
-void task_entry(void* param){
-  while (1)
-  {
-    EnterRamp();
-    vTaskSuspend(NULL);
-  }
-}
-
-void task_exit(void* param){
-  while (1)
-  {
-    ExitRamp();
-    vTaskSuspend(NULL);
-  }
-}
-
-// Za brisanje
-person blue = {{74, 9 ,136, 116}, "BLUE"};
-person white  = {{74, 42, 2, 116}, "WHITE"};
+person blue = {{112, 89 ,44, 85}, "BLUE"};
+person white  = {{63, 129, 42, 2}, "WHITE"};
 person yellow = {{74, 33 ,22, 116}, "YELLOW"};
 person grey = {{74, 16, 196, 116}, "GREY"};
 person orange  = {{74, 9 , 148, 116}, "ORANGE"};
@@ -56,13 +40,17 @@ components componentInit = {false};
 void setup() {
   Serial.begin(115200);
   delay(2000);
+  perfmon_start();
   WIFIsetup();
   setupWebServer();
 
   setupServo();
+  delay(200);
   VL_Setup();
+  delay(200);
   setupRFID();
   setupDisplay();
+
   Serial.println("ESP32 Clock Data:");
   Serial.println("==================================");
   Serial.printf("CPU Frequency: %u MHz\n", getCpuFrequencyMhz());
@@ -74,35 +62,38 @@ void setup() {
   
   Serial.println("Components init Data:");
   Serial.println("==================================");
-  Serial.print("Distance sensor init data:");
-  Serial.print(componentInit.distance[0] ? " Starded" : " faild to start");
-  Serial.print(" " + componentInit.distance[1] ? " Starded" : " faild to start");
-  Serial.print(" " + componentInit.distance[2] ? " Starded" : " faild to start");
-  Serial.print(" " + componentInit.distance[3] ? " Starded" : " faild to start");
-  Serial.println(" " + componentInit.distance[4] ? " Starded" : " faild to start");
+  Serial.println("Distance sensor init data:");
+  Serial.println("[1]: " + componentInit.distance[0] ? "Starded" : "Faild to start");
+  Serial.println("[2]: " + componentInit.distance[1] ? "Starded" : "Faild to start");
+  Serial.println("[3]: " + componentInit.distance[2] ? "Starded" : "Faild to start");
+  Serial.println("[4]: " + componentInit.distance[3] ? "Starded" : "Faild to start");
+  Serial.println("[5]: " + componentInit.distance[4] ? "Starded" : "Faild to start");
+  Serial.println("==================================");
   Serial.print("RFID scanner init state:");
-  Serial.println(componentInit.rfid ? " Starded" : "faild to start");
+  Serial.println(componentInit.rfid ? " Starded" : " Faild to start");
+  Serial.println("==================================");
   Serial.print("Display init state: ");
-  Serial.println(componentInit.display ? " Starded" : "faild to start");
+  Serial.println(componentInit.display ? " Starded" : " Faild to start");
   Serial.println("==================================");
   Serial.println();
 
   if(componentInit.rfid)
     xTaskCreate(Task_RFIDScanner, "RFIDScanner", 4096, NULL, 1, &xTaskScanRFID);
   if(componentInit.display)
-    xTaskCreate(Task_DisplayState, "DisplayState", 1024, NULL, 1, &xTaskDisplayState);
+    xTaskCreate(Task_DisplayState, "DisplayState", 4096, NULL, 1, &xTaskDisplayState);
   if(componentInit.distance[0])
-    xTaskCreate(Task_ParkingSlotCheck, "ParkingSlotCheck", 4096, NULL, 1, &xTaskDistanceSensor);
+    xTaskCreate(Task_ParkingSlotCheck, "ParkingSlotCheck", 2048, NULL, 1, &xTaskDistanceSensor); 
   if(componentInit.distance[4])
-    xTaskCreate(Task_ExitRamp, "ExitRamp", 4096, NULL, 1, &xTaskExitRamp);
-  xTaskCreate(Task_SerialState, "SerialTask", 4096, NULL, 0, &xTaskSerial); 
-
-  xTaskCreate(task_entry, "SerialTask", 4096, NULL, 0, &xenter);  
-  xTaskCreate(task_exit, "SerialTask", 4096, NULL, 0, &xexit);  
+    xTaskCreate(Task_ExitRamp, "ExitRampTrigger", 2048, NULL, 1, &xTaskExitRamp);
+  xTaskCreate(task_entry, "EntryRamp", 1024, NULL, 2, &xenter);  
+  xTaskCreate(task_exit, "ExitRamp", 1024, NULL, 2, &xexit);  
+  #ifdef DEBUG
+    xTaskCreate(Task_SerialState, "SerialTask", 1024, NULL, 0, &xTaskSerial); 
+  #endif
 }
 
 void loop() {
 
-  // sendEParkingSlotsToVercel(EParkingSlots);
-  delay(500);
+  delay(5000);
+
 }

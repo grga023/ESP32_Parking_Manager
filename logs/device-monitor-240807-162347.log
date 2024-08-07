@@ -1,0 +1,356 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+ESP32 Clock Data:
+==================================
+CPU Frequency: 240 MHz
+APB Frequency: 80000000 Hz
+I2C Bus Frequency: 400000 Hz
+304
+304
+4294965552
+4294965632
+4294964608
+4294964608
+==================================
+
+Components init Data:
+==================================
+Distance sensor init data:
+Starded
+Starded
+Starded
+Starded
+Starded
+==================================
+RFID scanner init state: Starded
+==================================
+Display init state:  Starded
+==================================
+
+1364
+1352
+1204
+1192
+752
+612
+1364
+1352
+1204
+1192
+752
+612
+
+1392
+1352
+1204
+1192
+752
+612
+
+assert failed: tcpip_send_msg_wait_sem IDF/components/lwip/lwip/src/api/tcpip.c:455 (Invalid mbox)
+
+
+Backtrace: 0x40083bb1:0x3ffb42d0 0x4008a3ed:0x3ffb42f0 0x4008f949:0x3ffb4310 0x400eb5d6:0x3ffb4440 0x400f7471:0x3ffb4470 0x400f74d1:0x3ffb4490 0x400eb44d:0x3ffb44e0 0x400d6044:0x3ffb4500 0x400d6185:0x3ffb4550 0x40135cd1:0x3ffb4580 0x400dadde:0x3ffb45a0 0x400d3786:0x3ffb45c0 0x400d37aa:0x3ffb45e0 0x400d34b1:0x3ffb4630 0x400d35e8:0x3ffb4690
+
+
+
+
+ELF file SHA256: 466b617378769e7d
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+ESP32 Clock Data:
+==================================
+CPU Frequency: 240 MHz
+APB Frequency: 80000000 Hz
+I2C Bus Frequency: 400000 Hz
+304
+304
+4294965552
+4294965632
+4294964608
+4294964608
+==================================
+
+Components init Data:
+==================================
+Distance sensor init data:
+Starded
+Starded
+Starded
+Starded
+Starded
+==================================
+RFID scanner init state: Starded
+==================================
+Display init state:  Starded
+==================================
+
+1364
+1352
+1204
+1192
+752
+600
+1364
+1352
+1204
+1192
+752
+600
+1364
+1352
+1220
+1192
+752
+600
+1364
+1352
+1220
+1192
+752
+600
+1364
+1352
+1220
+1192
+752
+600
+1364
+1352
+1220
+1192
+752
+600
+1364
+1352
+1220
+1192
+752
+600
+1364
+1352
+1220
+1192
+752
+600
+
+
+assert failed: tcpip_send_msg_wait_sem IDF/components/lwip/lwip/src/api/tcpip.c:455 (Invalid mbox)
+
+
+Backtrace: 0x40083bb1:0x3ffb42d0 0x4008a3ed:0x3ffb42f0 0x4008f949:0x3ffb4310 0x400eb5d6:0x3ffb4440 0x400f7471:0x3ffb4470 0x400f74d1:0x3ffb4490 0x400eb44d:0x3ffb44e0 0x400d6044:0x3ffb4500 0x400d6185:0x3ffb4550 0x40135cd1:0x3ffb4580 0x400dadde:0x3ffb45a0 0x400d3786:0x3ffb45c0 0x400d37aa:0x3ffb45e0 0x400d34b1:0x3ffb4630 0x400d35e8:0x3ffb4690
+
+
+
+
+ELF file SHA256: 466b617378769e7d
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+ESP32 Clock Data:
+==================================
+CPU Frequency: 240 MHz
+APB Frequency: 80000000 Hz
+I2C Bus Frequency: 400000 Hz
+304
+304
+4294965552
+4294965632
+4294964608
+4294964608
+==================================
+
+Components init Data:
+==================================
+Distance sensor init data:
+Starded
+Starded
+Starded
+Starded
+Starded
+==================================
+RFID scanner init state: Starded
+==================================
+Display init state:  Starded
+==================================
+
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+
+
+assert failed: tcpip_send_msg_wait_sem IDF/components/lwip/lwip/src/api/tcpip.c:455 (Invalid mbox)
+
+
+Backtrace: 0x40083bb1:0x3ffb42d0 0x4008a3ed:0x3ffb42f0 0x4008f949:0x3ffb4310 0x400eb5d6:0x3ffb4440 0x400f7471:0x3ffb4470 0x400f74d1:0x3ffb4490 0x400eb44d:0x3ffb44e0 0x400d6044:0x3ffb4500 0x400d6185:0x3ffb4550 0x40135cd1:0x3ffb4580 0x400dadde:0x3ffb45a0 0x400d3786:0x3ffb45c0 0x400d37aa:0x3ffb45e0 0x400d34b1:0x3ffb4630 0x400d35e8:0x3ffb4690
+
+
+
+
+ELF file SHA256: 466b617378769e7d
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+ESP32 Clock Data:
+==================================
+CPU Frequency: 240 MHz
+APB Frequency: 80000000 Hz
+I2C Bus Frequency: 400000 Hz
+304
+304
+4294965552
+4294965632
+4294964608
+4294964608
+==================================
+
+Components init Data:
+==================================
+Distance sensor init data:
+Starded
+Starded
+Starded
+Starded
+Starded
+==================================
+RFID scanner init state: Starded
+==================================
+Display init state:  Starded
+==================================
+
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668
+1364
+1352
+4294966020
+4294966020
+756
+668

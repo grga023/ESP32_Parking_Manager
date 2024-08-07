@@ -1,0 +1,44 @@
+ Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Connecting to Wi-Fi....
+Connected to Wi-Fi
+IP Address: 192.168.1.77
+ESP32 Clock Data:
+==================================
+CPU Frequency: 240 MHz
+APB Frequency: 80000000 Hz
+I2C Bus Frequency: 400000 Hz
+==================================
+
+Components init Data:
+==================================
+Distance sensor init data:
+Starded
+Starded
+Starded
+Starded
+Starded
+==================================
+RFID scanner init state: Starded
+==================================
+Display init state:  Starded
+==================================
+
+1
+
+15:47:53
+2
+3
+4
+5

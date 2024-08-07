@@ -14,6 +14,24 @@ void setupServo()
   Servo.writeServo(EXIT_RAMP_PIN, 80);
 }
 
+void task_entry(void* param)
+{
+  while (1)
+  {
+    EnterRamp();
+    vTaskSuspend(NULL);
+  }
+}
+
+void task_exit(void* param)
+{
+  while (1)
+  {
+    ExitRamp();
+    vTaskSuspend(NULL);
+  }
+}
+
 void EnterRamp() {
   for (int pos = 80; pos >= 0; pos--) {
     Servo.writeServo(ENTRY_RAMP_PIN, pos);
