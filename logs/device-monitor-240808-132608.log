@@ -1,0 +1,173 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Data read from flash successfully.
+Person 1: Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400d2a8b  PS      : 0x00060830  A0      : 0x800db88d  A1      : 0x3ffb2140  
+A2      : 0x3ffc31a4  A3      : 0x00000001  A4      : 0xffffffff  A5      : 0xffffffff  
+A6      : 0xffffffff  A7      : 0xffffffff  A8      : 0x800d2a85  A9      : 0x3ffb2120  
+A10     : 0x00000002  A11     : 0x3f405ab7  A12     : 0x0000000a  A13     : 0x3ffb2270  
+A14     : 0x00000001  A15     : 0x00000001  SAR     : 0x00000018  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000003  LBEG    : 0x400878d9  LEND    : 0x400878e9  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d2a88:0x3ffb2140 0x400db88a:0x3ffb2290
+
+
+
+
+ELF file SHA256: 8a5e5bcbafbc3b79
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Data read from flash successfully.
+Person 1: Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400d2a8b  PS      : 0x00060830  A0      : 0x800db88d  A1      : 0x3ffb2140  
+A2      : 0x3ffc31a4  A3      : 0x00000001  A4      : 0xffffffff  A5      : 0xffffffff  
+A6      : 0xffffffff  A7      : 0xffffffff  A8      : 0x800d2a85  A9      : 0x3ffb2120  
+A10     : 0x00000002  A11     : 0x3f405ab7  A12     : 0x0000000a  A13     : 0x3ffb2270  
+A14     : 0x00000001  A15     : 0x00000001  SAR     : 0x00000018  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000003  LBEG    : 0x400878d9  LEND    : 0x400878e9  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d2a88:0x3ffb2140 0x400db88a:0x3ffb2290
+
+
+
+
+ELF file SHA256: 8a5e5bcbafbc3b79
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Data read from flash successfully.
+Person 1: Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400d2a8b  PS      : 0x00060830  A0      : 0x800db88d  A1      : 0x3ffb2140  
+A2      : 0x3ffc31a4  A3      : 0x00000001  A4      : 0xffffffff  A5      : 0xffffffff  
+A6      : 0xffffffff  A7      : 0xffffffff  A8      : 0x800d2a85  A9      : 0x3ffb2120  
+A10     : 0x00000002  A11     : 0x3f405ab7  A12     : 0x0000000a  A13     : 0x3ffb2270  
+A14     : 0x00000001  A15     : 0x00000001  SAR     : 0x00000018  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000003  LBEG    : 0x400878d9  LEND    : 0x400878e9  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d2a88:0x3ffb2140 0x400db88a:0x3ffb2290
+
+
+
+
+ELF file SHA256: 8a5e5bcbafbc3b79
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Data read from flash successfully.
+Person 1: Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400d2a8b  PS      : 0x00060830  A0      : 0x800db88d  A1      : 0x3ffb2140  
+A2      : 0x3ffc31a4  A3      : 0x00000001  A4      : 0xffffffff  A5      : 0xffffffff  
+A6      : 0xffffffff  A7      : 0xffffffff  A8      : 0x800d2a85  A9      : 0x3ffb2120  
+A10     : 0x00000002  A11     : 0x3f405ab7  A12     : 0x0000000a  A13     : 0x3ffb2270  
+A14     : 0x00000001  A15     : 0x00000001  SAR     : 0x00000018  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000003  LBEG    : 0x400878d9  LEND    : 0x400878e9  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d2a88:0x3ffb2140 0x400db88a:0x3ffb2290
+
+
+
+
+ELF file SHA256: 8a5e5bcbafbc3b79
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Data read from flash successfully.
+Person 1: Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400d2a8b  PS      : 0x00060830  A0      : 0x800db88d  A1      : 0x3ffb2140  
+A2      : 0x3ffc31a4  A3      : 0x00000001  A4      : 0xffffffff  A5      : 0xffffffff  
+A6      : 0xffffffff  A7      : 0xffffffff  A8      : 0x800d2a85  A9      : 0x3ffb2120  
+A10     : 0x00000002  A11     : 0x3f405ab7  A12     : 0x0000000a  A13     : 0x3ffb2270  
+A14     : 0x00000001  A15     : 0x00000001  SAR     : 0x00000018  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000003  LBEG    : 0x400878d9  LEND    : 0x400878e9  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d2a88:0x3ffb2140 0x400db88a:0x3ffb2290
+
+
+
+
+ELF file SHA256: 8a5e5bcbafbc3b79
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0

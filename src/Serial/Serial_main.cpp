@@ -3,7 +3,7 @@
 #include "SetupAll.h"
 
 extern bool EParkingSlots[4];
-extern TaskHandle_t xenter;
+extern TaskHandle_t xTaskEntryRamp;
 void SerialHandler(bool *EParkingSlots)
 {
   std::string arrayString = "";
@@ -17,7 +17,7 @@ void SerialCommand()
 {
   if (Serial.available() > 0) 
   {
-    vTaskResume(xenter);
+    vTaskResume(xTaskEntryRamp);
     String command = Serial.readStringUntil('\n');
     if (command == "open") {
       EnterRamp();

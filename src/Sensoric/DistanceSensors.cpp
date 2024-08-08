@@ -9,7 +9,7 @@ Adafruit_VL6180X vl3 = Adafruit_VL6180X();
 Adafruit_VL6180X vl4 = Adafruit_VL6180X();
 Adafruit_VL6180X vl5 = Adafruit_VL6180X();
 
-extern TaskHandle_t xexit;
+extern TaskHandle_t xTaskExitRamp;
 
 uint8_t SHDN[5]                 = {SHDN_VL1, SHDN_VL2, SHDN_VL3, SHDN_VL4, SHDN_VL5};
 uint8_t VL_Address[5]           = {VL1_ADDRESS, VL2_ADDRESS, VL3_ADDRESS, VL4_ADDRESS, VL5_ADDRESS};
@@ -62,7 +62,7 @@ void Task_ExitRamp(void* param)
         distance = sensors[4]->readRange();
         if(distance < TRIGGER_DISTANCE && distance != 0)
         {
-            vTaskResume(xexit);
+            vTaskResume(xTaskExitRamp);
             Serial.println(distance);
         }
         vTaskDelay(pdMS_TO_TICKS(200));

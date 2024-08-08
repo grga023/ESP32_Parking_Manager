@@ -68,11 +68,11 @@ person checkID(uint8_t* uid, person* ljudi)
       }
       if (match) {
         vTaskSuspend(xTaskDisplayState);
-        WriteOnDisplay(3, 0, 0, "HELLO!", true);
+        WriteOnDisplay(3, 10, 20, "HELLO!", true);
         displayContent();
         vTaskDelay(pdMS_TO_TICKS(2000));
-        WriteOnDisplay(3, 5, 20, ljudi[i].name.c_str(), true);
-        addLogEntry(ljudi[i].name.c_str());
+        WriteOnDisplay(3, 5, 20, ljudi[i].name, true);
+        addLogEntry(ljudi[i].name);
         displayContent();
         EnterRamp();
         lastState = 255;
@@ -84,6 +84,7 @@ person checkID(uint8_t* uid, person* ljudi)
   WriteOnDisplay(3, 0, 0, "ACCESS DENIED", true);
   displayContent();
   vTaskDelay(pdMS_TO_TICKS(2000));
+  lastState = 255;
   vTaskResume(xTaskDisplayState);
   return EmptyPerson;
 }

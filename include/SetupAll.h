@@ -38,13 +38,15 @@
 
 #define OPEN_RAMP_DELAY 3000
 
+#define FLASH_ADDRESS 0x3FA000
 
 typedef uint8_t id[4];
 
 typedef struct
 {
+  char name[20]; 
   id personId;
-  std::string name;
+  uint8_t padding[8];
 } person;
 
 typedef person persons[MAX];

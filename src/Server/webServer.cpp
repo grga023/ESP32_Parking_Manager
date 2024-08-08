@@ -19,8 +19,8 @@ extern components componentInit;
 extern bool EParkingSlots[4];
 extern int empty;
 extern int cpu1;
-extern TaskHandle_t xexit;
-extern TaskHandle_t xenter;
+extern TaskHandle_t xTaskExitRamp;
+extern TaskHandle_t xTaskEntryRamp;
 
 String logTableRows = "";
 
@@ -146,11 +146,11 @@ void setupWebServer() {
 
   server.on("/openEntryRamp", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(200, "text/plain", "Function triggered");
-    vTaskResume(xenter);
+    vTaskResume(xTaskEntryRamp);
   });  
   server.on("/openExitRamp", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(200, "text/plain", "Function triggered");
-    vTaskResume(xexit);
+    vTaskResume(xTaskExitRamp);
   });  
   server.on("/RestartESP", HTTP_GET, [](AsyncWebServerRequest *request){
     vTaskSuspend(xTaskDisplayState);

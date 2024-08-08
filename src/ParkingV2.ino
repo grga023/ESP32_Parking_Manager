@@ -14,32 +14,28 @@
 #include "DataSender.h"
 #include "WebServer.h"
 #include "CPU_monitoring.h"
+#include "FlashDriver.h"
 
 TaskHandle_t xTaskScanRFID;
 TaskHandle_t xTaskDisplayState;
 TaskHandle_t xTaskDistanceSensor;
-TaskHandle_t xTaskExitRamp;
+TaskHandle_t xTaskExitRampTrigger;
 TaskHandle_t xTaskSerial;
-TaskHandle_t xenter;
-TaskHandle_t xexit;
+TaskHandle_t xTaskEntryRamp;
+TaskHandle_t xTaskExitRamp;
 
 int empty = 4;
 int sum[4] = {0}; 
 bool EParkingSlots[4] = {0};
-
-person blue = {{112, 89 ,44, 85}, "BLUE"};
-person white  = {{63, 129, 42, 2}, "WHITE"};
-person yellow = {{74, 33 ,22, 116}, "YELLOW"};
-person grey = {{74, 16, 196, 116}, "GREY"};
-person orange  = {{74, 9 , 148, 116}, "ORANGE"};
-
-persons ljudi = {blue, white, yellow, grey, orange};
-
+persons ljudi;
 components componentInit = {false};
 
 void setup() {
   Serial.begin(115200);
   delay(2000);
+
+  readPersonsFromFlash_4K(ljudi);
+
   perfmon_start();
   WIFIsetup();
   setupWebServer();
@@ -77,7 +73,23 @@ void setup() {
     Serial.println(componentInit.display ? " Starded" : " Faild to start");
     Serial.println("==================================");
     Serial.println();
-  #endif 
+
+
+    writeToFlash(ljudovi, 5);
+
+    for (int i = 0; i < 5; i++) {
+        Serial.print("Person ");
+        Serial.print(i + 1);
+        Serial.print(": ");
+        Serial.print(ljudi[i].name);
+        Serial.print(" - Data: ");
+        for (int j = 0; j < 4; j++) {
+            Serial.printf("%02X ", ljudi[i].personId[j]);
+        }
+        while(1);
+        Serial.println();
+    }
+#endif
 
   if(componentInit.rfid)
     xTaskCreate(Task_RFIDScanner, "RFIDScanner", 4096, NULL, 1, &xTaskScanRFID);
@@ -86,16 +98,16 @@ void setup() {
   if(componentInit.distance[0])
     xTaskCreate(Task_ParkingSlotCheck, "ParkingSlotCheck", 2048, NULL, 1, &xTaskDistanceSensor); 
   if(componentInit.distance[4])
-    xTaskCreate(Task_ExitRamp, "ExitRampTrigger", 2048, NULL, 1, &xTaskExitRamp);
-  xTaskCreate(task_entry, "EntryRamp", 1024, NULL, 2, &xenter);  
-  xTaskCreate(task_exit, "ExitRamp", 1024, NULL, 2, &xexit);  
+    xTaskCreate(Task_ExitRamp, "ExitRampTrigger", 2048, NULL, 1, &xTaskExitRampTrigger);
+
+  xTaskCreate(task_entry, "EntryRamp", 1024, NULL, 2, &xTaskEntryRamp);  
+  xTaskCreate(task_exit, "ExitRamp", 1024, NULL, 2, &xTaskExitRamp);  
+
   #ifdef DEBUG
     xTaskCreate(Task_SerialState, "SerialTask", 1024, NULL, 0, &xTaskSerial); 
   #endif
 }
 
 void loop() {
-
-  delay(5000);
-
+    while(1);
 }

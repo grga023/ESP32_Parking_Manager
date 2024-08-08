@@ -1,0 +1,149 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Data written to flash successfully.
+Data read from flash successfully.
+Person 1: BLUE - Data: 70 59 2C 55 
+Person 2: WHITE - Data: 3F 81 2A 02 
+Person 3: YELLOW - Data: 4A 21 16 74 
+Person 4: GREY - Data: 4A 10 C4 74 
+Person 5: ORANGE - Data: 4A 09 94 74 
+
+assert failed: heap_caps_free heap_caps.c:381 (heap != NULL && "free() target pointer is outside heap areas")
+
+
+Backtrace: 0x40083911:0x3ffb1f50 0x4008a0bd:0x3ffb1f70 0x4008f05d:0x3ffb1f90 0x40083d56:0x3ffb20c0 0x4008f08d:0x3ffb20e0 0x400fac95:0x3ffb2100 0x400faf98:0x3ffb2120 0x400d2a96:0x3ffb2140 0x400db8d2:0x3ffb2290
+
+
+
+
+ELF file SHA256: aca3cfbf56cfc287
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Data written to flash successfully.
+Data read from flash successfully.
+Person 1: BLUE - Data: 70 59 2C 55 
+Person 2: WHITE - Data: 3F 81 2A 02 
+Person 3: YELLOW - Data: 4A 21 16 74 
+Person 4: GREY - Data: 4A 10 C4 74 
+Person 5: ORANGE - Data: 4A 09 94 74 
+
+assert failed: heap_caps_free heap_caps.c:381 (heap != NULL && "free() target pointer is outside heap areas")
+
+
+Backtrace: 0x40083911:0x3ffb1f50 0x4008a0bd:0x3ffb1f70 0x4008f05d:0x3ffb1f90 0x40083d56:0x3ffb20c0 0x4008f08d:0x3ffb20e0 0x400fac95:0x3ffb2100 0x400faf98:0x3ffb2120 0x400d2a96:0x3ffb2140 0x400db8d2:0x3ffb2290
+
+
+
+
+ELF file SHA256: aca3cfbf56cfc287
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Data written to flash successfully.
+Data read from flash successfully.
+Person 1: BLUE - Data: 70 59 2C 55 
+Person 2: WHITE - Data: 3F 81 2A 02 
+Person 3: YELLOW - Data: 4A 21 16 74 
+Person 4: GREY - Data: 4A 10 C4 74 
+Person 5: ORANGE - Data: 4A 09 94 74 
+
+assert failed: heap_caps_free heap_caps.c:381 (heap != NULL && "free() target pointer is outside heap areas")
+
+
+Backtrace: 0x40083911:0x3ffb1f50 0x4008a0bd:0x3ffb1f70 0x4008f05d:0x3ffb1f90 0x40083d56:0x3ffb20c0 0x4008f08d:0x3ffb20e0 0x400fac95:0x3ffb2100 0x400faf98:0x3ffb2120 0x400d2a96:0x3ffb2140 0x400db8d2:0x3ffb2290
+
+
+
+
+ELF file SHA256: aca3cfbf56cfc287
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+Data written to flash successfully.
+Data read from flash successfully.
+Person 1: BLUE - Data: 70 59 2C 55 
+Person 2: WHITE - Data: 3F 81 2A 02 
+Person 3: YELLOW - Data: 4A 21 16 74 
+Person 4: GREY - Data: 4A 10 C4 74 
+Person 5: ORANGE - Data: 4A 09 94 74 
+
+assert failed: heap_caps_free heap_caps.c:381 (heap != NULL && "free() target pointer is outside heap areas")
+
+
+Backtrace: 0x40083911:0x3ffb1f50 0x4008a0bd:0x3ffb1f70 0x4008f05d:0x3ffb1f90 0x40083d56:0x3ffb20c0 0x4008f08d:0x3ffb20e0 0x400fac95:0x3ffb2100 0x400faf98:0x3ffb2120 0x400d2a96:0x3ffb2140 0x400db8d2:0x3ffb2290
+
+
+
+
+ELF file SHA256: aca3cfbf56cfc287
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
