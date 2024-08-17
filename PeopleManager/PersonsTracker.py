@@ -9,7 +9,7 @@ NAME_SIZE = 20
 ID_SIZE = 4
 PADDING_SIZE = 8
 RECORD_SIZE = NAME_SIZE + ID_SIZE + PADDING_SIZE
-END_SEGMENT_PATTERN = b'\xFF' * 16
+END_SEGMENT_PATTERN = b'\xFF' * 32
 
 # Function to read and parse the bin file
 def read_bin_file(file_path):
