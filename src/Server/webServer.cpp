@@ -19,6 +19,7 @@ extern components componentInit;
 extern bool EParkingSlots[4];
 extern int empty;
 extern int cpu1;
+extern int cpu0;
 extern TaskHandle_t xTaskExitRamp;
 extern TaskHandle_t xTaskEntryRamp;
 
@@ -42,7 +43,8 @@ String getComponentStatusHTML() {
   html += ".red { background-color: red; width: 100px; height: 100px; display: inline-block; margin: 10px; }";
   html += "h2 { margin-bottom: 0; }";  
   html += "</style></head><body>";
-  html += "<h1>CPU load is: "+String(cpu1)+"%</h1>";
+  html += "<h1>CPU Core0 load is: "+String(cpu0)+"%</h1>";  
+  html += "<h1>CPU Core1 load is: "+String(cpu1)+"%</h1>";
   html += "<h1>Component Status</h1>";
 
   // RFID

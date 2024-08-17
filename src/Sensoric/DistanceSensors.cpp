@@ -63,7 +63,9 @@ void Task_ExitRamp(void* param)
         if(distance < TRIGGER_DISTANCE && distance != 0)
         {
             vTaskResume(xTaskExitRamp);
-            Serial.println(distance);
+            #ifdef DEBUG
+                Serial.println(distance);
+            #endif
         }
         vTaskDelay(pdMS_TO_TICKS(200));
     }

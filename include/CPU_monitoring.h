@@ -5,6 +5,6 @@
 #include <freertos/task.h>
 #include "Arduino.h"
 
-#define uint64_t long
-
+typedef unsigned long long uint64_t;
+#define CONFIG_ESP32_DEFAULT_CPU_FREQ_240
 extern esp_err_t perfmon_start();

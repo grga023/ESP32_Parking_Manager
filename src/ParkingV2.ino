@@ -11,7 +11,6 @@
 #include "DistanceSensor.h"
 #include "WiFi_conector.h"
 #include "WiFi.h"
-#include "DataSender.h"
 #include "WebServer.h"
 #include "CPU_monitoring.h"
 #include "FlashDriver.h"
@@ -74,9 +73,6 @@ void setup() {
     Serial.println("==================================");
     Serial.println();
 
-
-    writeToFlash(ljudovi, 5);
-
     for (int i = 0; i < 5; i++) {
         Serial.print("Person ");
         Serial.print(i + 1);
@@ -95,7 +91,7 @@ void setup() {
     xTaskCreate(Task_RFIDScanner, "RFIDScanner", 4096, NULL, 1, &xTaskScanRFID);
   if(componentInit.display)
     xTaskCreate(Task_DisplayState, "DisplayState", 4096, NULL, 1, &xTaskDisplayState);
-  if(componentInit.distance[0])
+  if(componentInit.distance[0] && componentInit.distance[1] && componentInit.distance[2] && componentInit.distance[3])
     xTaskCreate(Task_ParkingSlotCheck, "ParkingSlotCheck", 2048, NULL, 1, &xTaskDistanceSensor); 
   if(componentInit.distance[4])
     xTaskCreate(Task_ExitRamp, "ExitRampTrigger", 2048, NULL, 1, &xTaskExitRampTrigger);
@@ -108,6 +104,7 @@ void setup() {
   #endif
 }
 
-void loop() {
-    while(1);
+void loop() 
+{
+
 }
