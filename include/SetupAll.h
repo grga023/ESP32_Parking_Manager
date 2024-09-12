@@ -8,7 +8,7 @@
 
 #define I2C_SPEED 400000 
 
-#define WIFI_SSID     "Grgur"
+#define WIFI_SSID     "Grgur_AP"
 #define WIFI_PASWORD  "192837645"
 
 #define ENTRY_RAMP_PIN 15 //GPIO15, servo1

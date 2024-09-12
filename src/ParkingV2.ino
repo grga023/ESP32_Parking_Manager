@@ -23,9 +23,9 @@ TaskHandle_t xTaskSerial;
 TaskHandle_t xTaskEntryRamp;
 TaskHandle_t xTaskExitRamp;
 
-int empty = 4;
+int empty = 0;
 int sum[4] = {0}; 
-bool EParkingSlots[4] = {0};
+bool EParkingSlots[4] = {true,true,true,true};
 persons ljudi;
 components componentInit = {false};
 
@@ -41,10 +41,10 @@ void setup() {
 
   setupServo();
   delay(200);
-  VL_Setup();
-  delay(200);
   setupRFID();
   setupDisplay();
+  VL_Setup();
+  delay(200);
 
   #ifdef DEBUG
     Serial.println("ESP32 Clock Data:");
@@ -73,7 +73,7 @@ void setup() {
     Serial.println("==================================");
     Serial.println();
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < MAX; i++) {
         Serial.print("Person ");
         Serial.print(i + 1);
         Serial.print(": ");
@@ -82,7 +82,6 @@ void setup() {
         for (int j = 0; j < 4; j++) {
             Serial.printf("%02X ", ljudi[i].personId[j]);
         }
-        while(1);
         Serial.println();
     }
 #endif
@@ -91,7 +90,7 @@ void setup() {
     xTaskCreate(Task_RFIDScanner, "RFIDScanner", 4096, NULL, 1, &xTaskScanRFID);
   if(componentInit.display)
     xTaskCreate(Task_DisplayState, "DisplayState", 4096, NULL, 1, &xTaskDisplayState);
-  if(componentInit.distance[0] && componentInit.distance[1] && componentInit.distance[2] && componentInit.distance[3])
+  if(componentInit.distance[0] || componentInit.distance[1] || componentInit.distance[2] || componentInit.distance[3])  
     xTaskCreate(Task_ParkingSlotCheck, "ParkingSlotCheck", 2048, NULL, 1, &xTaskDistanceSensor); 
   if(componentInit.distance[4])
     xTaskCreate(Task_ExitRamp, "ExitRampTrigger", 2048, NULL, 1, &xTaskExitRampTrigger);

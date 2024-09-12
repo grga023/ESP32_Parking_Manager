@@ -20,6 +20,7 @@ extern int empty;
 
 void Task_ParkingSlotCheck(void* param)
 {
+    uint8_t distance;
     while(1)
     {
         #ifdef DEBUG
@@ -28,21 +29,30 @@ void Task_ParkingSlotCheck(void* param)
         #endif
         for (int i = 0; i < 4; i++)
         {
-            if(sensors[i]->readRange() < TRIGGER_DISTANCE)
+            if(componentInit.distance[i])
             {
-                if(EParkingSlots[i] != true)
+                distance = sensors[i]->readRange();
+                if(distance < TRIGGER_DISTANCE && distance != 0)
                 {
-                    empty--;
-                    EParkingSlots[i] = true;
-                }
-            }else
+                    if(EParkingSlots[i] != true)
+                    {
+                        empty--;
+                        EParkingSlots[i] = true;
+                    }
+                }else
+                {
+
+                    if(EParkingSlots[i] != false)
+                    {
+                        EParkingSlots[i] = false;
+                        empty++;
+                    }
+                } 
+            }
+            else
             {
-                if(EParkingSlots[i] != false)
-                {
-                    EParkingSlots[i] = false;
-                    empty++;
-                }
-            } 
+                EParkingSlots[i] = true;
+            }
         }
         #ifdef DEBUG
         time2 = millis() - time;
@@ -76,7 +86,7 @@ void VL_Setup()
     if(!Wire.begin())
     {    
         for(int i = 0; i < 5; i++){
-            componentInit.distance[i] = {false};
+            componentInit.distance[i] = false;
         }
         return;
     }
@@ -102,13 +112,14 @@ void setupAddress()
     for(int i = 0; i < 5; i++)
     {
         digitalWrite(SHDN[i], HIGH);
-        delay(10);
+        delay(100);
 
         if (!sensors[i]->begin()) {
             #ifdef DEBUG
             Serial.printf("Failed to boot %d. VL6180X\n", i+1);
             #endif
             componentInit.distance[i] = false;
+            digitalWrite(SHDN[i], LOW);
         }
         else{
             sensors[i]->setAddress(VL_Address[i]);
@@ -117,7 +128,7 @@ void setupAddress()
             #endif
             componentInit.distance[i] = true;
         }
-        delay(10);
+        delay(100);
     }
     #ifdef DEBUG
     check();

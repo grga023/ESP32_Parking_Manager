@@ -63,12 +63,12 @@ void Task_DisplayState(void* param)
       default:
         if(empty != lastState)
         {
+          lastState = empty;
           WriteOnDisplay(2, 5, 0, "FREE SPOTS", true);
           emptySlots = std::to_string(empty);
           WriteOnDisplay(4, 25, 25, emptySlots, false);
           WriteOnDisplay(4, 48, 25, "/4", false);
           display.display(); 
-          lastState = empty;
         }
         break;
     }
