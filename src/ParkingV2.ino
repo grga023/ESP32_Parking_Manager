@@ -88,10 +88,13 @@ void setup() {
 
   if(componentInit.rfid)
     xTaskCreate(Task_RFIDScanner, "RFIDScanner", 4096, NULL, 1, &xTaskScanRFID);
+
   if(componentInit.display)
     xTaskCreate(Task_DisplayState, "DisplayState", 4096, NULL, 1, &xTaskDisplayState);
+
   if(componentInit.distance[0] || componentInit.distance[1] || componentInit.distance[2] || componentInit.distance[3])  
     xTaskCreate(Task_ParkingSlotCheck, "ParkingSlotCheck", 2048, NULL, 1, &xTaskDistanceSensor); 
+    
   if(componentInit.distance[4])
     xTaskCreate(Task_ExitRamp, "ExitRampTrigger", 2048, NULL, 1, &xTaskExitRampTrigger);
 
